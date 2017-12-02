@@ -19,14 +19,13 @@ def calculate():
 def calculate_2():
     matrix = read()
     su = 0
-    for x in xrange(len(matrix[0])):
-        for y in xrange (len(matrix[0])):
-            for k in xrange(len(matrix[0])):
+    for x in xrange(len(matrix)):
+        for y in xrange (len(matrix)):
+            for k in xrange(len(matrix)):
                 if (k != y):
                     if (matrix[x][y]%(matrix[x][k])==0):
                         su+=(matrix[x][y]/(matrix[x][k]))
-                    if (matrix[x][k]%(matrix[x][y])==0):
-                        su+=(matrix[x][k]/matrix[x][y])
+    print len(matrix)/len(matrix[0])
     print su
 
 calculate()
